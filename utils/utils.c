@@ -82,6 +82,11 @@ bool	parsing_check(const char *str, int *result)
 	i = 0;
 	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
 		i++;
+	if (!(ft_strncmp(&str[i], "-2147483648", (ft_strlen("-2147483648") + 1))))
+	{
+		*result = -2147483648;
+		return (true);
+	}
 	if (str[i] && (str[i] == '+' || str[i] == '-'))
 		i++;
 	if (str[i] && (str[i] == '+' || str[i] == '-'))

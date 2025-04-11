@@ -94,6 +94,8 @@ void	sort_5(t_list **stack_a, t_list **stack_b)
 
 void	ez_sort(t_list **stack_a, t_list **stack_b, int size)
 {
+	if (size == 2)
+		sa(stack_a);
 	if (size == 3)
 		sort_3(stack_a);
 	if (size == 4)
