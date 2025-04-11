@@ -89,6 +89,8 @@ bool	parsing_check(const char *str, int *result)
 	}
 	if (str[i] && (str[i] == '+' || str[i] == '-'))
 		i++;
+	if (!str[i])
+		return (false);
 	if (str[i] && (str[i] == '+' || str[i] == '-'))
 		return (false);
 	while (str[i] && (str[i] >= 48 && str[i] <= 57))

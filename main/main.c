@@ -25,6 +25,13 @@ void	sort_all(t_list **stack_a, t_list **stack_b)
 
 int	two_args(char **av, t_list **stack_a, t_list **stack_b)
 {
+	if (ft_strlen(av[1]) == 0)
+	{
+		ft_lstclear(stack_a);
+		ft_lstclear(stack_b);
+		ft_putendl_fd("Error", 1);
+		return (-1);
+	}
 	av = ft_split(av[1], ' ');
 	av--;
 	if (init_stack(stack_a, av) == -1)
